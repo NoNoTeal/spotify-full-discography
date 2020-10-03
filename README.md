@@ -1,2 +1,7 @@
 # spotify-full-discography
-Crappy chrome extension that lets you see all songs that an artist has on Spotify
+
+Since I'm too cheap to shell out $5 heres my stupid extension (2d of work)
+
+# Contributing
+
+Use pull requests
