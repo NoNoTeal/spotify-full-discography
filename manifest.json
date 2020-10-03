@@ -1,0 +1,39 @@
+{
+    "name": "Spotify Full Discography",
+    "version": "1.0",
+    "description": "Shows full discography of a Spotify artist. (requires account authorization)",
+    "permissions": [
+      "tabs",
+      "storage",
+      "declarativeContent",
+      "activeTab",
+      "*://*/*"
+    ],
+    "icons": { 
+      "16": "/icns/activeIcon/activeIcon16px.png",
+      "32": "/icns/activeIcon/activeIcon32px.png",
+      "48": "/icns/activeIcon/activeIcon48px.png",
+      "128": "/icns/activeIcon/activeIcon128px.png" 
+      },
+    "content_scripts": [
+      {
+        "matches": ["https://open.spotify.com/artist/*/discography"],
+        "js": ["scripts/main.js"]
+      }
+    ],
+    "background": {
+      "scripts": ["scripts/background.js"],
+      "persistent": false
+    },
+    "page_action": {
+      "default_title": "Spotify Full Discography (Inactive)",
+      "default_popup": "scripts/html/popup.html",
+      "default_icon": { 
+          "16": "/icns/disabledIcon/disabledIcon16px.png",
+          "32": "/icns/disabledIcon/disabledIcon32px.png",
+          "48": "/icns/disabledIcon/disabledIcon48px.png",
+          "128": "/icns/disabledIcon/disabledIcon128px.png" 
+      }
+    },
+    "manifest_version": 2
+}

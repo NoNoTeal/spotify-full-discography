@@ -1,0 +1,1 @@
+console.log('Spotify Full Discography (extension) is activated on this page.')
