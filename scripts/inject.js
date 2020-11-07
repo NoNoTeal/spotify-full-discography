@@ -1,5 +1,5 @@
 try{
-if(!/(?<=^https:\/\/open\.spotify\.com\/artist\/).*?(?=\/discography)/gmi.test(location.href)) return;
+if(/(?<=^https:\/\/open\.spotify\.com\/artist\/).*?(?=\/discography)/gmi.test(location.href)) {
 var contentSpacing = [...document.getElementsByClassName('contentSpacing')][0];
 [...contentSpacing.children].forEach(e => {
     e.remove();
@@ -68,4 +68,5 @@ data.forEach(musicPiece => {
         break;
     };
 });
+}
 } catch {};
